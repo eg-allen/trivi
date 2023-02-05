@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+
+const questions = ["Who is Santa's favorite reindeer?", 
+                  "Who invented the airplane?", 
+                  "When is St. Patrick's Day?", 
+                  "How often should you go to the dentist?", 
+                  "How much does a newborn elephant weigh?"];
+const listQuestions = questions.map((question) =>
+  <li>{question}</li>
+);
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload ya dingus.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>welcome to trivi</h1>
       </header>
+      <body>
+        <div className="Questions">
+          <ul>{listQuestions}</ul>
+        </div>
+      </body>
     </div>
   );
 }
